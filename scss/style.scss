@@ -1,16 +1,17 @@
 $active-menu: #c16878;
 $button-hover: #B25566;
-$c-font: #242424;
+$c-primary: #7d8f87;
+$c-font: hsl(0, 0%, 20%);
+$grey: hsl(0, 0%, 80%);
+$lightgrey:#f0f0f0;
+
 $c-box1: #ABB194;
 $c-box2: #A0A8AF;
 $c-box3: #d7c5bb;
-$banner: #7d8f87;
-$grey: hsl(0, 0%, 70%);
-$lightgrey:#f0f0f0;
 
-
-$font-base: 'Merriweather', serif;
-$font-special: 'Open Sans', sans-serif;
+$font-base: 'Open Sans', sans-serif;
+$font-special: 'Merriweather', serif;
+$font-logo: 'Cormorant Infant', serif;
 $spacer-big:30px;
 $spacer-small:20px;
 
@@ -39,19 +40,21 @@ body{
     top:0;
     left:0;
     right: 0;
-    background-color: $banner;
+    background-color: $c-primary;
     
 	
 	
     &__title {
-        font-family: $font-special;
-        font-size: 24px;
-        margin: 0;}
+        font-family: $font-logo;
+        font-size: 30px;
+        margin: 0 0 10px 0;
+        color:$c-font;
+    }
         
     &__description {
         font-family: $font-special;
         font-style: italic;
-        font-size: 18px;
+        font-size: 16px;
         margin: 0;}
         
     &__menu {
@@ -59,7 +62,7 @@ body{
         display:flex;
         margin:0;
         font-size: 16px;
-        color: white;
+        
         
     }
 
@@ -67,7 +70,7 @@ body{
         text-decoration: none;
         border-radius: 20px;
         padding: $spacer-small/2 $spacer-big/2;
-        color: white; 
+        color: $grey; 
         
                
     }
@@ -88,10 +91,11 @@ body{
 */
 
 .banner{
-    background-image: url(images/cupcake.jpg) ;
+    background-image: url(images/bannerHZ1.jpg);
     background-size: cover;
     background-position: center;
-    margin-top: 108px;
+    margin-top: 118px;
+    
 
     &__description{
         margin:0;
@@ -231,7 +235,7 @@ body{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: $spacer-big;
-        background-color: $banner;
+        background-color: $c-primary;
         color: white;
         margin: 0;
         padding: $spacer-big $spacer-big * 3;
