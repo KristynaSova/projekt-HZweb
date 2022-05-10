@@ -119,6 +119,9 @@ body {
   width: 100%;
   border-radius: 5px;
 }
+.article__image--round {
+  border-radius: 100px;
+}
 .article__column-right {
   flex: 1 1 auto;
 }
