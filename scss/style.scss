@@ -1,109 +1,136 @@
-$active-menu: #c16878;
-$button-hover: #B25566;
-$c-primary: #7d8f87;
-$c-font: hsl(0, 0%, 20%);
-$grey: hsl(0, 0%, 80%);
-$lightgrey:#f0f0f0;
+@use "abstracts/colors";
+@use "abstracts/fonts";
+@use "abstracts/spacer";
 
-$c-box1: #ABB194;
-$c-box2: #A0A8AF;
-$c-box3: #d7c5bb;
 
-$font-base: 'Open Sans', sans-serif;
-$font-special: 'Merriweather', serif;
-$font-logo: 'Cormorant Infant', serif;
-$spacer-big:30px;
-$spacer-small:20px;
 
+
+
+
+//----------------------------------------
+html {
+    box-sizing: border-box;
+}
+
+* , ::before, ::after {
+    box-sizing: inherit;
+}
 
 
 
 body{
-    font-family: $font-base;
+    font-family: fonts.$font-base;
     font-size: 16px;
-    color: $c-font;
+    color: colors.$c-font;
     margin: 0;
     line-height: 1.5em;
 }
 
+.main{
+    margin-top: 113px;
+}
+
 /*
  **************************************
-	MAIN-HEADER
+	HEADER
  **************************************
 */
 .header{
     
 	display: flex;
 	justify-content: space-between;
-    padding: $spacer-big  $spacer-big *3;
+    padding: spacer.$spacer-big  spacer.$spacer-big *3;
     position:fixed;
     top:0;
     left:0;
     right: 0;
-    background-color: $c-primary;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 3px 3px 10px rgba(51, 51, 51, 0.7);
+    
     
 	
 	
     &__title {
-        font-family: $font-logo;
-        font-size: 30px;
-        margin: 0 0 10px 0;
-        color:$c-font;
-    }
-        
-    &__description {
-        font-family: $font-special;
-        font-style: italic;
-        font-size: 16px;
-        margin: 0;}
-        
-    &__menu {
-        list-style: none;
-        display:flex;
-        margin:0;
-        font-size: 16px;
+        font-family: fonts.$font-logo;
+        font-size: 24px;
+        margin: 0 0 5px 0;
         
         
     }
 
-    &__item {
+    &__link{
+        text-decoration: none;
+        color:colors.$c-font;
+    }
+
+        
+    &__description {
+        font-family: fonts.$font-special;
+        font-style: italic;
+        font-size: 14px;
+        margin: 0;}
+        
+    
+}
+
+.menu{
+       
+    margin:0;
+    font-size: 16px;
+    
+    &__list{
+        display:flex;
+        list-style: none;
+        margin: 0;
+
+    }
+        
+    
+
+    &__link {
+              
         text-decoration: none;
         border-radius: 20px;
-        padding: $spacer-small/2 $spacer-big/2;
-        color: $grey; 
-        
+        padding: spacer.$spacer-small/2 spacer.$spacer-big/2;
+        color: colors.$c-font;
+
+        &:hover,
+        &:focus{
+        color: white;
+	    background-color: colors.$active-menu;
+    } 
                
     }
 
-    &__item:hover,
-    &__item:focus{
-        color: white;
-	    background-color: $active-menu;
-    }
-}
+    
 
+}
 
 
 /*
  **************************************
-	MAIN Banner
+	Home hero
  **************************************
 */
 
-.banner{
-    background-image: url(images/bannerHZ1.jpg);
+.hero{
+    display: flex;
+    background-image: url(../images/bannerHZ1.jpg);
     background-size: cover;
     background-position: center;
-    margin-top: 118px;
+    height: 250px;
+    justify-content: center;
+    align-items: flex-end;
     
 
     &__description{
-        margin:0;
-        color: grey;
+        margin-bottom:5px;
+        color: white;
         text-align: center;
         font-style: italic;
-        font-size: 20px;
-        font-family: $font-base;
+        font-size: 24px;
+        font-family: fonts.$font-logo;
     }
 
    
@@ -113,37 +140,58 @@ body{
 
 /*
  **************************************
-	MAIN Inner section
+	Home-Inner section
  **************************************
 */
 
-.welcome{
+.article{
 
-    background-color:$lightgrey;
-    
+    background-color:colors.$lightgrey;
+    padding: spacer.$spacer-big *3;
+
+    &--background-color{
+        background-color: white;
+    }
+
     &__flex{
         display: flex;
         gap: 20px;
-        padding: $spacer-big *3; 
+         
         margin: 0 auto;
         
     }
 
     &__column-left{
-        max-width: 300px;
+        max-width: 400px;
         border-radius: 5px;
     }
     &__image{
-        object-fit: cover;
         width:100%;
         border-radius: 5px;
     }
 
 
     &__column-right{
-       flex: 1 1 50%;
+       flex: 1 1 auto;
         
     }
+
+    &__title{
+        margin-top: 0;
+        font-family: fonts.$font-special;
+        font-size: 18px;
+         
+     }
+
+     &__title--center{
+         text-align: center;
+         font-size: 24px;
+         
+     }
+     
+     &__title--small{
+         font-size: 16px;
+     }
 
     &__column-right p {
         margin-top: 0;
@@ -153,20 +201,31 @@ body{
      &__column-right p + p {
         margin-top: 16px;
     }
+
+    &__list li{
+        margin-top: 0;
+    }
+
+    &__list li + li {
+        margin-top: 10px;
+    }
+
+   
+
 }
 
 
 
 .button{
     font-size: 16px;
-    padding: $spacer-small / 2 $spacer-big / 2;
+    padding: spacer.$spacer-small / 2 spacer.$spacer-big / 2;
     border-radius: 20px;
-    background-color: $active-menu;
+    background-color: colors.$active-menu;
     border: 0;
    
 
     &:hover{
-        background-color: $button-hover;
+        background-color: colors.$button-hover;
     }
 
     
@@ -176,23 +235,25 @@ body{
     }
 }
 
-
+.buttons{
+    text-align: right;
+}
 
 .container{
     
 
     &__flex{
         display: flex;
-        gap: 20px;
-        padding: $spacer-big *3;
+        gap: spacer.$spacer-small;
+        padding: spacer.$spacer-big *3;
         
     }
 
     &__flex-column{
         width:100%;
         border-radius: 5px;
-        box-shadow: 3px 3px 15px rgba($color: $c-font, $alpha: 0.7);
-        padding: $spacer-big;
+        box-shadow: 3px 3px 15px rgba($color: colors.$c-font, $alpha: 0.7);
+        padding: spacer.$spacer-big;
         text-align: center;
         transition: transform 0.3s;
        
@@ -205,13 +266,13 @@ body{
 
     &__flex-column a{
         text-decoration: none;
-        color: $c-font;
+        color: colors.$c-font;
     }
 
 
     &__title{
         margin-top: 0;
-        font-family: $font-special;
+        font-family: fonts.$font-special;
         font-size: 25px;
         line-height: 1.5em;
     }
@@ -223,7 +284,7 @@ body{
 
 /*
  **************************************
-	MAIN Footer
+	Footer
  **************************************
 */
 
@@ -234,11 +295,11 @@ body{
     &__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: $spacer-big;
-        background-color: $c-primary;
+        gap: spacer.$spacer-big;
+        background-color: colors.$c-primary;
         color: white;
         margin: 0;
-        padding: $spacer-big $spacer-big * 3;
+        padding: spacer.$spacer-big spacer.$spacer-big * 3;
                 
     }
 
@@ -247,7 +308,7 @@ body{
     }
 
     &__copyright {
-        padding: $spacer-big / 2 $spacer-big;
+        padding: spacer.$spacer-big / 2 spacer.$spacer-big;
         font-size: 14px;
         text-align: center;
         margin-top: 0;
@@ -260,7 +321,7 @@ body{
 
     
     &__title2{
-        color:$grey;
+        color:colors.$grey;
         font-size: 16px;
     }
 }
