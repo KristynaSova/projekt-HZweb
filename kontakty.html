@@ -1,0 +1,43 @@
+---
+layout: main-layout.njk
+title: Kontakty
+---
+
+<main class="main">
+
+    <article class="article">
+
+        <form class="form" action="https://formular.itgirls.cz" method="post">
+
+            <h2 class="article__title">Kontaktní formulář</h2>
+            
+            <div class="form__field">
+
+                <label for="jmeno">Jméno</label>
+                <input type="text" name="jmeno" id="jmeno">
+            </div>	
+
+            <div class="form__field">
+                <label for="prijmeni">Příjmení <span class="required">*</span></label>
+                <input type="text" name="prijmeni" id="prijmeni" required>
+            </div>
+
+            <div class="form__field">
+                <label for="email">E-mail<span class="required">*</span></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="form__field">
+                <label for="textarea">Text zprávy</label>
+                <textarea name="textarea" id="textarea" rows="5"></textarea>
+            </div>
+            <div class="buttons--center">
+                <button type="submit" class="button button__title">Odeslat</button>
+            </div>
+        </form>
+
+            
+
+    </article>
+
+</main>

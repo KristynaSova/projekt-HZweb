@@ -133,6 +133,7 @@ body {
 .article__title--center {
   text-align: center;
   font-size: 24px;
+  margin-bottom: 30px;
 }
 .article__title--small {
   font-size: 16px;
@@ -169,6 +170,10 @@ body {
   text-align: right;
 }
 
+.buttons--center {
+  text-align: center;
+}
+
 .container__flex {
   display: flex;
   gap: 20px;
@@ -194,6 +199,38 @@ body {
   font-family: "Merriweather", serif;
   font-size: 25px;
   line-height: 1.5em;
+}
+
+/*
+ **************************************
+	Contacts
+ **************************************
+*/
+.form {
+  width: 100%;
+  max-width: 400px;
+}
+.form__field {
+  margin-bottom: 10px;
+}
+.form__field > label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: hsl(0deg, 0%, 20%);
+}
+.form__field input[type=text], .form__field input[type=email], .form__field textarea, .form__field select {
+  width: 100%;
+  border: 1px solid hsl(0deg, 0%, 20%);
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: white;
+}
+.form__field input[type=text]:focus, .form__field input[type=email]:focus, .form__field textarea:focus, .form__field select:focus {
+  outline: 0;
+  border: 2px solid #7d8f87;
+  background: white;
 }
 
 /*

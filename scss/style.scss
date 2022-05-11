@@ -7,6 +7,9 @@
 
 
 
+
+
+
 //----------------------------------------
 html {
     box-sizing: border-box;
@@ -192,6 +195,7 @@ body{
      &__title--center{
          text-align: center;
          font-size: 24px;
+         margin-bottom: spacer.$spacer-big;
          
      }
      
@@ -241,10 +245,16 @@ body{
      text-decoration: none;
      color: white;
     }
+
+    
 }
 
 .buttons{
     text-align: right;
+}
+
+.buttons--center{
+    text-align: center;
 }
 
 .container{
@@ -285,6 +295,49 @@ body{
         line-height: 1.5em;
     }
 	
+}
+
+/*
+ **************************************
+	Contacts
+ **************************************
+*/
+.form{
+	width: 100%;
+	max-width: 400px;
+
+    &__field{
+        margin-bottom:10px;
+        }
+    
+    &__field > label{
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        color: colors.$c-font;
+        }
+    
+        &__field input[type="text"],
+        &__field input[type="email"],
+        &__field textarea,
+        &__field select{
+            width: 100%;
+            border: 1px solid colors.$c-font;
+            border-radius: 4px;
+            font-size: 16px;
+            padding: 5px 10px;
+            background-color: white;
+        }
+
+        &__field input[type="text"]:focus,
+        &__field input[type="email"]:focus,
+        &__field textarea:focus,
+        &__field select:focus{
+            outline:0;
+	        border:2px solid colors.$c-primary;
+	        background: white;
+        }
+
 }
 
 
