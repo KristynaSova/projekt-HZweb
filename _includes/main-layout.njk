@@ -18,25 +18,7 @@
 </head>
 <body>
 
-    	<!-- Header -->
-	<div class="header">
-        <div class="header__left">
-            <h1 class="header__title"><a class="header__link" href="/">Hana ZAKOUŘILOVÁ</a></h1>
-            <p class="header__description">psychoterapeut</p>
-        </div>
-        
-        <nav class="menu">
-            <ul class="menu__list">
-                <li><a class="menu__link" href="/">Úvod</a></li>
-                <li><a class="menu__link" href="/sluzby/">Služby</a></li>
-                <li><a class="menu__link" href="/omne/">O mně</a></li>
-                <li><a class="menu__link" href="/fotogalerie/">Fotogalerie</a></li>
-                <li><a class="menu__link" href="/cenik/">Ceník</a></li>
-                <li><a class="menu__link" href="/kontakty/">Kontakty</a></li>
-            </ul>
-        </nav>
-
-    </div>
+    {% include 'partials/header-nav.njk' %}
 
     <main class="main">
 
@@ -45,41 +27,7 @@
 	</main>
 
 
-    <footer class="footer">
-
-        <div class="footer__grid">
-
-            <div class="footer__grid-column">
-                <h2 class="footer__title">Odkazy</h2>
-                <p class="footer_description"></p>
-            </div>
-
-            <div class="footer__grid-column">
-                <h2 class="footer__title">Mgr. Hana Zakouřilová, MBA</h2>
-                <p class="footer_description">
-                    Brná 55<br>
-                    517 43 Potštejn<br>
-                    IČ 02541203
-                </p>
-            </div>
-
-            <div class="footer__grid-column">
-                <h2 class="footer__title">Kontakt</h2>
-                <p class="footer_description">
-                    <span class="footer__title2">Telefon:</span><br>
-                    +420 604 449 406
-                </p>
-                <p class="footer_description">
-                    <span class="footer__title2">E-mail:</span><br>
-                    hzakourilova@gmail.com
-                </p>
-            </div>
-        </div>
-
-        <div class="footer__copyright">
-            &copy;2022, Hana Zakouřilová
-        </div>
-    </footer>
+    {% include 'partials/footer.njk' %}
 
 </body>
 </html>

@@ -1,0 +1,49 @@
+<article class="article">
+        
+        <div class="article__flex">
+
+            <!-- left column -->
+            <div class="article__column-left">
+                <img class="article__image" src="/images/profile.jpg" alt="Hanka">
+            </div>
+            <!-- right column -->           
+            <div class="article__column-right">	
+                <h2 class="article__title" >Psychoterapeutka Hana Zakouřilová</h2>
+                <p>Jsem ráda, že jste zavítali na mé webové stránky. V rámci své činnosti se věnuji několika oblastem - poradenství, psychoterapie, primárně preventivní aktivity na základních a středních školách, vzdělávací aktivity. </p>
+                <p>Více o nabízených službách naleznete v jednotlivých záložkách. Pokud byste měli jakýkoliv dotaz, budu ráda, když mě kontaktujete.</p>
+                <p>Během své práce dodržuji etické zásady a mlčenlivost. Jsem členkou České asociace pro psychoterapii.</p>
+                
+                <button class="button">
+                <a class="button__title" href="/omne/">Moje reference</a>
+                </button>
+                
+            </div>
+
+        </div>
+    </article>
+
+css
+
+ &__flex{
+        display: flex;
+        gap: 20px;
+         
+        margin: 0 auto;
+        
+    }
+
+    &__column-left{
+        max-width: 400px;
+        border-radius: 5px;
+    }
+
+    
+    &__image{
+        width:100%;
+        border-radius: 5px;
+    }
+
+ &__column-right{
+       flex: 1 1 auto;
+        
+    }
