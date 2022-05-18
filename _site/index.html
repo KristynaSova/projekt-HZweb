@@ -33,12 +33,12 @@
                 <label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
 
                 <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__link" href="/">Úvod</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/sluzby/">Služby</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/omne/">O mně</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/fotogalerie/">Fotogalerie</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/cenik/">Ceník</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/kontakty/">Kontakty</a></li>
+                    <li class="menu__item menu__item--active"><a class="menu__link" href="/">Úvod</a></li>
+                    <li class="menu__item "><a class="menu__link" href="/sluzby/">Služby</a></li>
+                    <li class="menu__item "><a class="menu__link" href="/omne/">O mně</a></li>
+                    <li class="menu__item "><a class="menu__link" href="/fotogalerie/">Fotogalerie</a></li>
+                    <li class="menu__item "><a class="menu__link" href="/cenik/">Ceník</a></li>
+                    <li class="menu__item "><a class="menu__link" href="/kontakty/">Kontakty</a></li>
                 </ul>
             </nav>
     
@@ -65,28 +65,28 @@
 
         <div class="container__flex-column">
             <h2 class="container__title">
-                <a href="#sluzby">Poradenství a psychoterapie</a> 
+                <a href="#service1">Poradenství a psychoterapie</a> 
             </h2>
-            <a href="#sluzby">
-             <img class="container__image" src="#" alt="kompas">
+            <a href="#service1">
+             <img class="container__image" src="/images/couch-solid.svg" alt="couch">
             </a>
         </div>
 
         <div class="container__flex-column">
             <h2 class="container__title">
-                <a href="#sluzby">Primární prevence</a>
+                <a href="#service2">Primární prevence</a>
             </h2>
-            <a href="#sluzby">
-             <img class="container__image" src="#" alt="ruce">
+            <a href="#service2">
+             <img class="container__image" src="/images/hands.svg" alt="hands">
             </a>
         </div>
 
         <div class="container__flex-column">
             <h2 class="container__title">
-                <a href="#sluzby">Lektorská činnost</a>
+                <a href="#service3">Lektorská činnost</a>
             </h2>
-            <a href="#sluzby">
-                <img class="container__image" src="#" alt="passion">
+            <a href="#service3">
+                <img class="container__image" src="/images/book.svg" alt="book">
             </a>
         </div>
     
@@ -105,15 +105,16 @@
            
             <!-- right column -->           
             <div class="article__column-right">	
-                <h2 class="article__title" >Psychoterapeutka Hana Zakouřilová</h2>
+                <h2 class="article__title" >Mgr. Hana Zakouřilová, MBA</h2>
                 <p>Jsem ráda, že jste zavítali na mé webové stránky. V rámci své činnosti se věnuji několika oblastem - poradenství, psychoterapie, primárně preventivní aktivity na základních a středních školách, vzdělávací aktivity. </p>
                 <p>Více o nabízených službách naleznete v jednotlivých záložkách. Pokud byste měli jakýkoliv dotaz, budu ráda, když mě kontaktujete.</p>
                 <p>Během své práce dodržuji etické zásady a mlčenlivost. Jsem členkou České asociace pro psychoterapii.</p>
-                
-                <button class="button">
-                <a class="button__title" href="/omne/">Moje reference</a>
-                </button>
-                
+            
+                <div class="buttons">
+                    <button class="button">
+                    <a class="button__title" href="/omne/">Moje reference</a>
+                    </button>
+                </div>
             </div>
 
         </div>
@@ -165,6 +166,8 @@
         &copy;2022, Hana Zakouřilová
     </div>
 </footer>
+
+    <script src="fslightbox.js"></script>
 
 </body>
 </html>

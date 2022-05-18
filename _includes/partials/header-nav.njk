@@ -13,12 +13,12 @@
                 <label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
 
                 <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__link" href="/">Úvod</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/sluzby/">Služby</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/omne/">O mně</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/fotogalerie/">Fotogalerie</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/cenik/">Ceník</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/kontakty/">Kontakty</a></li>
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === '' }}"><a class="menu__link" href="/">Úvod</a></li>
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'sluzby' }}"><a class="menu__link" href="/sluzby/">Služby</a></li>
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'omne' }}"><a class="menu__link" href="/omne/">O mně</a></li>
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'fotogalerie' }}"><a class="menu__link" href="/fotogalerie/">Fotogalerie</a></li>
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'cenik' }}"><a class="menu__link" href="/cenik/">Ceník</a></li>
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'kontakty' }}"><a class="menu__link" href="/kontakty/">Kontakty</a></li>
                 </ul>
             </nav>
     

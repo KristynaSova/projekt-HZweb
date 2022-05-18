@@ -5,38 +5,65 @@ title: Kontakty
 
 <main class="main">
 
-    <article class="article">
+    <article class="contact">
 
-        <form class="form" action="https://formular.itgirls.cz" method="post">
+        <div class="contact__grid">
 
-            <h2 class="article__title">Kontaktní formulář</h2>
+            <form class="form" action="https://formular.itgirls.cz" method="post">
+
+                <h2 class="form__title">Kontaktní formulář</h2>
+                
+                <div class="form__field">
+
+                    <label for="jmeno" class="form__required">Jméno</label>
+                    <input type="text" name="jmeno" id="jmeno">
+                </div>	
+
+                <div class="form__field">
+                    <label for="prijmeni"class="form__required">Příjmení</label>
+                    <input type="text" name="prijmeni" id="prijmeni" required>
+                </div>
+
+                <div class="form__field">
+                    <label for="email" class="form__required">E-mail</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="form__field">
+                    <label for="textarea">Text zprávy</label>
+                    <textarea name="textarea" id="textarea" rows="5"></textarea>
+                </div>
+                <div class="buttons--center">
+                    <button type="submit" class="button button__title">Odeslat</button>
+                </div>
+            </form>
+
+            <div class="contact__columnm-right">
+
+                <h2 class="contact__title">Mgr. Hana Zakouřilová, MBA</h2>
+
+			    <p>
+				<strong>Telefon:</strong> +420 604 449 406<br>
+				<strong>E-mail:</strong> hzakourilova@gmail.com<br>
+				<strong>Skype:</strong> hzakourilova
+                </p>
+
+
+                <p><strong>Poradenství a psychoterapii</strong> poskytuji v Komunitním centru v Kostelci nad Orlicí.</p>
+
+			    <p>
+				<strong>Adresa</strong><br>
+				Příkopy 530, 1. patro<br>
+				517 41 Kostelec nad Orlicí
+			    </p>
+
+            	    
+
+            </div>
+
             
-            <div class="form__field">
 
-                <label for="jmeno" class="form__required">Jméno</label>
-                <input type="text" name="jmeno" id="jmeno">
-            </div>	
-
-            <div class="form__field">
-                <label for="prijmeni"class="form__required">Příjmení</label>
-                <input type="text" name="prijmeni" id="prijmeni" required>
-            </div>
-
-            <div class="form__field">
-                <label for="email" class="form__required">E-mail</label>
-                <input type="email" name="email" id="email" required>
-            </div>
-
-            <div class="form__field">
-                <label for="textarea">Text zprávy</label>
-                <textarea name="textarea" id="textarea" rows="5"></textarea>
-            </div>
-            <div class="buttons--center">
-                <button type="submit" class="button button__title">Odeslat</button>
-            </div>
-        </form>
-
-            
+        </div>
 
     </article>
 

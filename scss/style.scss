@@ -29,7 +29,9 @@ h1, h2, h3{
 
 .main{
 
-    @media screen and (min-width: 640px){
+    margin-top: 0;
+
+    @media screen and (min-width: 1100px){
         margin-top: 113px;
     }
     
@@ -44,7 +46,7 @@ h1, h2, h3{
 .header{
    
 
-   	padding: spacer.$spacer-big  spacer.$spacer;
+   	padding: spacer.$spacer-big  spacer.$spacer / 3;
     background-color: white;
     box-shadow: 3px 3px 10px rgba(51, 51, 51, 0.7);
 
@@ -70,10 +72,8 @@ h1, h2, h3{
 
      @media screen and (min-width: 640px){
 
-        display: flex;
-        justify-content: space-between;
-
-              
+        display: block;
+                            
         }
 
     @media screen and (min-width: 1100px){
@@ -84,6 +84,7 @@ h1, h2, h3{
         z-index: 1;
         display: flex;
         justify-content: space-between;
+        padding: spacer.$spacer-big  spacer.$spacer;
 
     }
  
@@ -109,6 +110,11 @@ h1, h2, h3{
         position: absolute;
         left: -9999px;
     }
+
+    .menu__item--active .menu__link {
+        background-color: colors.$c-primary;
+        color: white;
+    }
     
     &__list{
         display:none;
@@ -118,19 +124,22 @@ h1, h2, h3{
         background-color: colors.$c-secondary;
     }
     
-         
+   
+    
     &__link{
         display: block;
         text-decoration: none;
         border-radius: 20px;
         padding: spacer.$spacer-small/2 spacer.$spacer-big/2;
         color: white;
+        
 
         &:hover,
         &:focus{
         color: white;
         background-color: colors.$c-primary;} 
     }
+
 
     
     @media screen and (max-width: 1099px) {
@@ -174,6 +183,7 @@ h1, h2, h3{
 }
 
 
+  
 /*
  **************************************
 	Home hero
@@ -219,15 +229,13 @@ h1, h2, h3{
 .article{
 
     background-color:colors.$lightgrey;
-    padding: spacer.$spacer-big *3 spacer.$spacer;
+    padding: spacer.$spacer-big*2 spacer.$spacer / 3;
 
     &--background-color{
         background-color: white;
     }
 
-    &--center{
-        text-align: center;
-    }
+   
 
     &__image{
         width:100%;
@@ -248,7 +256,8 @@ h1, h2, h3{
         margin-top: spacer.$spacer-small;
         font-family: fonts.$font-special;
         font-size: 18px;
-        text-align: center;
+        text-align: left;
+        
         
     }
 
@@ -264,7 +273,7 @@ h1, h2, h3{
     }
 
     &__column-right{
-        text-align: center;
+        text-align: left;
     }
 
     &__column-left{
@@ -295,11 +304,17 @@ h1, h2, h3{
 
 
     @media screen and (min-width:1100px){
+        
+        padding: spacer.$spacer-big * 3 spacer.$spacer;
+        
+       
+       
         &__grid{
             display: grid;
             gap: 20px;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
+           
         }
 
         &__column-right{
@@ -347,6 +362,7 @@ h1, h2, h3{
     background-color: colors.$c-primary;
     border: 0;
    
+   
 
     &:hover{
         background-color: colors.$button-hover;
@@ -359,6 +375,10 @@ h1, h2, h3{
     }
 
     
+}
+
+.article__column-right .button{
+    margin: 0 auto;
 }
 
 .buttons{
@@ -376,7 +396,7 @@ h1, h2, h3{
 .container {
     display: block;
         &__flex{
-            padding: spacer.$spacer-big spacer.$spacer;
+            padding: spacer.$spacer-big * 2 spacer.$spacer / 3;
         }
         
          &__flex-column{
@@ -386,10 +406,13 @@ h1, h2, h3{
             text-align: center;
             transition: transform 0.3s;
             margin-bottom: spacer.$spacer-big;
+            background: colors.$c-box4;
         
         }
 
-        
+        &__image{
+            width: 50px;
+        }
 
         &__flex-column:hover{
             transform: scale(1.08);
@@ -430,9 +453,60 @@ h1, h2, h3{
 	Contacts
  **************************************
 */
+.contact{
+
+    padding: spacer.$spacer-big * 2 spacer.$spacer / 3;
+    &__grid{
+        display: block;
+    }
+
+    
+
+    &__title{
+        margin-top: 0;
+        text-align: left;
+        font-family: fonts.$font-special;
+        font-size: 18px;
+        
+    }
+
+      
+    &__column-right{
+        text-align: left;
+    }
+
+    @media screen and (min-width:1100px){
+            
+        padding: spacer.$spacer-big * 3 spacer.$spacer;
+                
+        &__grid{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        
+        }
+
+       
+    
+    }
+        
+}
+
+
 .form{
 	width: 100%;
 	max-width: 400px;
+    margin-bottom: spacer.$spacer-big * 2;
+
+    &__title{
+        margin-top: 0;
+        margin-bottom: spacer.$spacer-small;
+        font-family: fonts.$font-special;
+        font-size: 18px;
+        text-align: left;
+
+    }
 
     &__field{
         margin-bottom:10px;
@@ -476,6 +550,52 @@ h1, h2, h3{
 
 }
 
+
+/*
+ **************************************
+	Fotogalerie
+ **************************************
+*/
+.gallery{
+
+    padding: spacer.$spacer-big * 2 spacer.$spacer / 3;
+
+    &__grid{
+        display: block;
+    }
+
+    
+    &__grid img{
+        width: 100%;
+
+    }
+
+    @media screen and (min-width:640px){
+
+        &__grid{
+            display: grid;
+	         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	         gap: 20px;
+        }
+
+        &__grid img{
+            width: 100%;
+
+        }
+
+
+
+    }
+
+    @media screen and (min-width:1100px){
+            
+        padding: spacer.$spacer-big * 3 spacer.$spacer;
+
+    
+    }
+
+	
+}
 
 
 

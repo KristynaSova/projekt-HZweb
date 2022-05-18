@@ -33,12 +33,12 @@
                 <label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
 
                 <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__link" href="/">Úvod</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/sluzby/">Služby</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/omne/">O mně</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/fotogalerie/">Fotogalerie</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/cenik/">Ceník</a></li>
-                    <li class="menu__item"><a class="menu__link" href="/kontakty/">Kontakty</a></li>
+                    <li class="menu__item "><a class="menu__link" href="/">Úvod</a></li>
+                    <li class="menu__item menu__item--active"><a class="menu__link" href="/sluzby/">Služby</a></li>
+                    <li class="menu__item "><a class="menu__link" href="/omne/">O mně</a></li>
+                    <li class="menu__item "><a class="menu__link" href="/fotogalerie/">Fotogalerie</a></li>
+                    <li class="menu__item "><a class="menu__link" href="/cenik/">Ceník</a></li>
+                    <li class="menu__item "><a class="menu__link" href="/kontakty/">Kontakty</a></li>
                 </ul>
             </nav>
     
@@ -55,28 +55,28 @@
 
         <div class="container__flex-column">
             <h2 class="container__title">
-                <a href="#sluzby">Poradenství a psychoterapie</a> 
+                <a href="#service1">Poradenství a psychoterapie</a> 
             </h2>
-            <a href="#sluzby">
-             <img class="container__image" src="#" alt="kompas">
+            <a href="#service1">
+             <img class="container__image" src="/images/couch-solid.svg" alt="couch">
             </a>
         </div>
 
         <div class="container__flex-column">
             <h2 class="container__title">
-                <a href="#sluzby">Primární prevence</a>
+                <a href="#service2">Primární prevence</a>
             </h2>
-            <a href="#sluzby">
-             <img class="container__image" src="#" alt="ruce">
+            <a href="#service2">
+             <img class="container__image" src="/images/hands.svg" alt="hands">
             </a>
         </div>
 
         <div class="container__flex-column">
             <h2 class="container__title">
-                <a href="#sluzby">Lektorská činnost</a>
+                <a href="#service3">Lektorská činnost</a>
             </h2>
-            <a href="#sluzby">
-                <img class="container__image" src="#" alt="passion">
+            <a href="#service3">
+                <img class="container__image" src="/images/book.svg" alt="book">
             </a>
         </div>
     
@@ -85,7 +85,7 @@
     
 </div>
 
-    <article class="article article--center">
+    <article id="service1" class="article article--center">
         <h1 class="article__title article__title--center">Poradenství a psychoterapie</h1>
         
         <p>Oblasti poradenství a psychoterapii se věnuji několik let. Mezi mé klienty patří dospělí, kteří se cítí nespokojeni nebo prochází náročným životním období, rodiče, kteří potřebují poradit, jak dál nebo si nejsou jisti v oblasti výchovy svých dětí, mladí lidé, kteří se ve svém životě ztratili, děti s obtížemi v učení či vyrovnávající se s různými těžkostmi.</p>
@@ -134,7 +134,7 @@
     </article>
           
     
-    <article class="article article--background-color article--center">
+    <article id="service2" class="article article--background-color article--center">
         <h1 class="article__title article__title--center">Primárně preventivní programy</h1>
         
         <p>Primární prevenci rizikového chování se věnuji 10 let. Pracuji se třídami na základních i středních školách. Programy realizuji dle konkrétních požadavků školy. Vždy je při přípravě programu zohledněna cílová skupina, počet dětí, rozložení dle pohlaví, integrované děti, historie třídy, aktuální stav. Pracuji jak s třídami klidnými, tak i s třídami "problémovými".</p>
@@ -169,7 +169,7 @@
 
     </article>
 
-    <article class="article article--center">
+    <article id="service3" class="article article--center">
         <h1 class="article__title article__title--center">Lektorská činnost</h1>
         
         <p>Lektorské a přednáškové činnosti se věnuji 4 roky. Vždy se snažím, aby se nejednalo o nudnou přednášku. Semináře realizuji vždy na objednávku dle konkrétních požadavků.</p>
@@ -247,6 +247,8 @@
         &copy;2022, Hana Zakouřilová
     </div>
 </footer>
+
+    <script src="fslightbox.js"></script>
 
 </body>
 </html>
