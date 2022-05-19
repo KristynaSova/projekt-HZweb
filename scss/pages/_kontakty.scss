@@ -1,0 +1,99 @@
+@use '../abstracts/_colors.scss';
+@use "../abstracts/_fonts.scss";
+@use "../abstracts/_spacer.scss";
+
+.contact{
+
+    padding: spacer.$spacer-big * 2 spacer.$spacer / 3;
+    &__grid{
+        display: block;
+    }
+
+    
+
+    &__title{
+        margin-top: 0;
+        text-align: left;
+        font-family: fonts.$font-special;
+        font-size: 18px;
+        
+    }
+
+      
+    &__column-right{
+        text-align: left;
+    }
+
+    @media screen and (min-width:1100px){
+            
+        padding: spacer.$spacer-big * 3 spacer.$spacer;
+                
+        &__grid{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        
+        }
+
+       
+    
+    }
+        
+}
+
+.form{
+	width: 100%;
+	max-width: 400px;
+    margin-bottom: spacer.$spacer-big * 2;
+
+    &__title{
+        margin-top: 0;
+        margin-bottom: spacer.$spacer-small;
+        font-family: fonts.$font-special;
+        font-size: 18px;
+        text-align: left;
+
+    }
+
+    &__field{
+        margin-bottom:10px;
+        }
+    
+    &__field > label{
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        color: colors.$c-font;
+        }
+    
+        &__field input[type="text"],
+        &__field input[type="email"],
+        &__field textarea,
+        &__field select{
+            width: 100%;
+            border: 1px solid colors.$c-font;
+            border-radius: 4px;
+            font-size: 16px;
+            padding: 5px 10px;
+            background-color: white;
+        }
+
+        &__field input[type="text"]:focus,
+        &__field input[type="email"]:focus,
+        &__field textarea:focus,
+        &__field select:focus{
+            outline:0;
+	        border:2px solid colors.$c-secondary;
+	        background: white;
+        }
+
+        &__required::after{
+            content: "*";
+	        color: colors.$c-primary;
+	        margin-left: 4px;
+
+        }
+        
+
+}

@@ -1,0 +1,45 @@
+@use '../abstracts/_colors.scss';
+@use "../abstracts/_fonts.scss";
+@use "../abstracts/_spacer.scss";
+
+
+.gallery{
+
+    padding: spacer.$spacer-big * 2 spacer.$spacer / 3;
+
+    &__grid{
+        display: block;
+    }
+
+    
+    &__grid img{
+        width: 100%;
+
+    }
+
+    @media screen and (min-width:640px){
+
+        &__grid{
+            display: grid;
+	         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	         gap: 20px;
+        }
+
+        &__grid img{
+            width: 100%;
+
+        }
+
+
+
+    }
+
+    @media screen and (min-width:1100px){
+            
+        padding: spacer.$spacer-big * 3 spacer.$spacer;
+
+    
+    }
+
+	
+}

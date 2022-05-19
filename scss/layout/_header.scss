@@ -1,5 +1,59 @@
-@use '../abstracts/colors';
-@use "../abstracts/fonts";
-@use "../abstracts/spacer";
+@use '../abstracts/_colors.scss';
+@use "../abstracts/_fonts.scss";
+@use "../abstracts/_spacer.scss";
+
+
+/*
+ **************************************
+	HEADER
+ **************************************
+*/
+.header{
+   
+
+ padding: spacer.$spacer-big  spacer.$spacer / 3;
+ background-color: white;
+ box-shadow: 3px 3px 10px rgba(51, 51, 51, 0.7);
+
+ &__title {
+         font-family: fonts.$font-logo;
+         font-size: 24px;
+         margin: 0 0 5px 0;
+                  
+     }
+
+ &__link{
+     text-decoration: none;
+     color:colors.$c-font;
+ }
+
+     
+ &__description {
+     font-family: fonts.$font-special;
+     font-style: italic;
+     font-size: 14px;
+     margin: 0;}
+
+
+  @media screen and (min-width: 640px){
+
+     display: block;
+                         
+     }
+
+ @media screen and (min-width: 1100px){
+     position:fixed;
+     top:0;
+     left:0;
+     right: 0;
+     z-index: 1;
+     display: flex;
+     justify-content: space-between;
+     padding: spacer.$spacer-big  spacer.$spacer;
+
+ }
+
+}
+
 
 

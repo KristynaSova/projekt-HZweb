@@ -1,0 +1,45 @@
+@use '../abstracts/_colors.scss';
+@use "../abstracts/_fonts.scss";
+@use "../abstracts/_spacer.scss";
+
+
+
+
+
+.button{
+    font-size: 16px;
+    padding: spacer.$spacer-small / 2 spacer.$spacer-big / 2;
+    border-radius: 20px;
+    background-color: colors.$c-primary;
+    border: 0;
+   
+   
+
+    &:hover{
+        background-color: colors.$button-hover;
+    }
+
+    
+    &__title{
+     text-decoration: none;
+     color: white;
+    }
+
+    
+}
+
+.article__column-right .button{
+    margin: 0 auto;
+}
+
+.buttons{
+    text-align: center;
+
+    @media screen and (min-width:1100px){
+        text-align: right;
+    }
+}
+
+.buttons--center{
+    text-align: center;
+}

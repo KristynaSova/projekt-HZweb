@@ -2,6 +2,21 @@
 @use "abstracts/fonts";
 @use "abstracts/spacer";
 
+@use "layout/header";
+@use "layout/menu";
+@use "layout/footer";
+
+@use "components/hero";
+@use "components/buttons";
+@use "components/services-boxes";
+
+@use "pages/kontakty";
+@use "pages/fotogalerie";
+
+
+
+
+
 
 
 //----------------------------------------
@@ -38,198 +53,23 @@ h1, h2, h3{
     
 }
 
-/*
- **************************************
-	HEADER
- **************************************
-*/
-.header{
-   
-
-   	padding: spacer.$spacer-big  spacer.$spacer / 3;
-    background-color: white;
-    box-shadow: 3px 3px 10px rgba(51, 51, 51, 0.7);
-
-    &__title {
-            font-family: fonts.$font-logo;
-            font-size: 24px;
-            margin: 0 0 5px 0;
-                     
-        }
-
-    &__link{
-        text-decoration: none;
-        color:colors.$c-font;
-    }
-
-        
-    &__description {
-        font-family: fonts.$font-special;
-        font-style: italic;
-        font-size: 14px;
-        margin: 0;}
-
-
-     @media screen and (min-width: 640px){
-
-        display: block;
-                            
-        }
-
-    @media screen and (min-width: 1100px){
-        position:fixed;
-        top:0;
-        left:0;
-        right: 0;
-        z-index: 1;
-        display: flex;
-        justify-content: space-between;
-        padding: spacer.$spacer-big  spacer.$spacer;
-
-    }
+  
  
-}
-
-   
-        
-    
-
-
-.menu{
-       
-    margin:0;
-    font-size: 16px;
-    text-align: center;
-
-
-    &__toggler{
-        cursor: pointer;
-    }
-
-    .menu__checkbox{
-        position: absolute;
-        left: -9999px;
-    }
-
-    .menu__item--active .menu__link {
-        background-color: colors.$c-primary;
-        color: white;
-    }
-    
-    &__list{
-        display:none;
-        margin:0;
-        padding: 0;
-        list-style: none;
-        background-color: colors.$c-secondary;
-    }
-    
-   
-    
-    &__link{
-        display: block;
-        text-decoration: none;
-        border-radius: 20px;
-        padding: spacer.$spacer-small/2 spacer.$spacer-big/2;
-        color: white;
-        
-
-        &:hover,
-        &:focus{
-        color: white;
-        background-color: colors.$c-primary;} 
-    }
-
-
-    
-    @media screen and (max-width: 1099px) {
-        &__checkbox:checked ~ &__list{
-            display: block;
-        }
-    }
-
-                 
-    @media screen and (min-width:1100px) {
-
-        &__toggler{
-            display: none;
-        }
-    
-          
-        &__list{
-            display:flex;
-            background-color: white;
-          
-
-        }
-
-        &__link {
-                
-            text-decoration: none;
-            border-radius: 20px;
-            padding: spacer.$spacer-small/2 spacer.$spacer-big/2;
-            color: colors.$c-font;
-
-            &:hover,
-            &:focus{
-            color: white;
-            background-color: colors.$c-primary;} 
-                
-        }
-    }
-
-    
-
-}
 
 
   
-/*
- **************************************
-	Home hero
- **************************************
-*/
-
-.hero{
-
-    display: none;
-
-
-
-    @media screen and (min-width:640px){
-        display: flex;
-        background-image: url(../images/bannerHZ1.jpg);
-        background-size: cover;
-        background-position: center;
-        height: 250px;
-        justify-content: center;
-        align-items: flex-end;
-        
-
-        &__description{
-            margin-bottom:5px;
-            color: white;
-            text-align: center;
-            font-style: italic;
-            font-size: 24px;
-            font-family: fonts.$font-logo;
-        }
-    }
-   
-}
-
 
 
 /*
  **************************************
-	Home-Inner section
+	Home-Inner section (
  **************************************
 */
 
 .article{
 
     background-color:colors.$lightgrey;
-    padding: spacer.$spacer-big*2 spacer.$spacer / 3;
+    padding: calc(spacer.$spacer-big * 2) calc(spacer.$spacer / 3);
 
     &--background-color{
         background-color: white;
@@ -355,318 +195,47 @@ h1, h2, h3{
 
 
 
-.button{
-    font-size: 16px;
-    padding: spacer.$spacer-small / 2 spacer.$spacer-big / 2;
-    border-radius: 20px;
-    background-color: colors.$c-primary;
-    border: 0;
-   
-   
-
-    &:hover{
-        background-color: colors.$button-hover;
-    }
-
-    
-    &__title{
-     text-decoration: none;
-     color: white;
-    }
-
-    
-}
-
-.article__column-right .button{
-    margin: 0 auto;
-}
-
-.buttons{
-    text-align: center;
-
-    @media screen and (min-width:1100px){
-        text-align: right;
-    }
-}
-
-.buttons--center{
-    text-align: center;
-}
-
-.container {
-    display: block;
-        &__flex{
-            padding: spacer.$spacer-big * 2 spacer.$spacer / 3;
-        }
-        
-         &__flex-column{
-            border-radius: 5px;
-            box-shadow: 3px 3px 15px rgba($color: colors.$c-font, $alpha: 0.7);
-            padding: spacer.$spacer-big;
-            text-align: center;
-            transition: transform 0.3s;
-            margin-bottom: spacer.$spacer-big;
-            background: colors.$c-box4;
-        
-        }
-
-        &__image{
-            width: 50px;
-        }
-
-        &__flex-column:hover{
-            transform: scale(1.08);
-        }
-
-        &__flex-column a{
-            text-decoration: none;
-            color: colors.$c-font;
-        }
-
-
-        &__title{
-            margin-top: 0;
-            font-family: fonts.$font-special;
-            font-size: 25px;
-            line-height: 1.5em;
-        }
-    @media screen and (min-width:1100px){
-
-        &__flex{
-            display: flex;
-            gap: spacer.$spacer-small;
-            padding: spacer.$spacer-big *3 spacer.$spacer;
-            
-        }
-
-        &__flex-column{
-            width:100%;
-            margin-bottom: 0;
-                 
-    }
-}
-
-}
-
-/*
- **************************************
-	Contacts
- **************************************
-*/
-.contact{
-
-    padding: spacer.$spacer-big * 2 spacer.$spacer / 3;
-    &__grid{
-        display: block;
-    }
-
-    
-
-    &__title{
-        margin-top: 0;
-        text-align: left;
-        font-family: fonts.$font-special;
-        font-size: 18px;
-        
-    }
-
-      
-    &__column-right{
-        text-align: left;
-    }
-
-    @media screen and (min-width:1100px){
-            
-        padding: spacer.$spacer-big * 3 spacer.$spacer;
-                
-        &__grid{
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
-        
-        }
-
-       
-    
-    }
-        
-}
-
-
-.form{
-	width: 100%;
-	max-width: 400px;
-    margin-bottom: spacer.$spacer-big * 2;
-
-    &__title{
-        margin-top: 0;
-        margin-bottom: spacer.$spacer-small;
-        font-family: fonts.$font-special;
-        font-size: 18px;
-        text-align: left;
-
-    }
-
-    &__field{
-        margin-bottom:10px;
-        }
-    
-    &__field > label{
-        display: block;
-        font-size: 14px;
-        font-weight: bold;
-        color: colors.$c-font;
-        }
-    
-        &__field input[type="text"],
-        &__field input[type="email"],
-        &__field textarea,
-        &__field select{
-            width: 100%;
-            border: 1px solid colors.$c-font;
-            border-radius: 4px;
-            font-size: 16px;
-            padding: 5px 10px;
-            background-color: white;
-        }
-
-        &__field input[type="text"]:focus,
-        &__field input[type="email"]:focus,
-        &__field textarea:focus,
-        &__field select:focus{
-            outline:0;
-	        border:2px solid colors.$c-secondary;
-	        background: white;
-        }
-
-        &__required::after{
-            content: "*";
-	        color: colors.$c-primary;
-	        margin-left: 4px;
-
-        }
-        
-
-}
 
 
 /*
  **************************************
-	Fotogalerie
+	Submission thanks! - for contact form
  **************************************
 */
-.gallery{
 
+.submission{
     padding: spacer.$spacer-big * 2 spacer.$spacer / 3;
 
+    line-height: 2em;
+   
+
     &__grid{
-        display: block;
-    }
-
-    
-    &__grid img{
-        width: 100%;
-
-    }
-
-    @media screen and (min-width:640px){
-
-        &__grid{
-            display: grid;
-	         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	         gap: 20px;
-        }
-
-        &__grid img{
-            width: 100%;
-
-        }
-
-
-
-    }
-
-    @media screen and (min-width:1100px){
-            
-        padding: spacer.$spacer-big * 3 spacer.$spacer;
-
-    
-    }
-
-	
-}
-
-
-
-/*
- **************************************
-	Footer
- **************************************
-*/
-
-
-.footer{
-    
-
-    &__grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: spacer.$spacer-big;
-        background-color: colors.$c-secondary;
-        color: white;
-        margin: 0;
-        padding: spacer.$spacer-big spacer.$spacer;
-                
+        grid-template-columns: 1fr;
     }
 
-    &__grid-column{
-        font-size: 14px;
+    &__image{
+        width: 250px;
     }
 
-    &__grid-column--mobile{
-        grid-column: span 3;
-      }
+    &__grid-item{
+        grid-column: span 1;
+    }
 
-    &__copyright {
-        padding: spacer.$spacer-big / 2 spacer.$spacer-big;
-        font-size: 14px;
+    &__grid-item--center{
         text-align: center;
-        margin-top: 0;
+    }
+    
+    &__grid-item p:first-child{
+        margin-bottom: 10px;
     }
 
-
-    &__title{
-        font-size: 16px;
-    }
 
     
-    &__title2{
-        color:colors.$grey;
-        font-size: 16px;
-    }
-
-    @media screen and (min-width: 640px){
-
-        &__grid-column:first-child{
-            grid-column: span 1;
-        }
-
-        &__grid-column:nth-child(2){
-            grid-column: span 2;
-          }
+    @media screen and (min-width:1100px){
+            
+        padding: spacer.$spacer-big * 3 spacer.$spacer;
 
     }
-
-    @media screen and (min-width: 1100px){
-        &__grid-column:nth-child(2){
-            grid-column: span 1;
-          }
-        
-          &__grid-column:nth-child(3){
-            grid-column: span 1;
-          }
-    }
-        
-
 }
+

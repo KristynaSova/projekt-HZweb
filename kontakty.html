@@ -2,6 +2,27 @@
 layout: main-layout.njk
 title: Kontakty
 ---
+	<!--
+		Vytvořit formulář, který napojíme na službu pro zpracování formulářů.
+
+		 https://formspark.io/
+
+		FormSpark umožňuje 250 odeslání zdarma,
+		další se musí platit ($25 za 50.000 odeslání, cca 600 Kč).
+		
+		Postup:
+		1) Vytvoř si účet na formspark.io
+		2) Přihlaš se
+		3) Vytvoř nový formulář - stačí zadat pouze jeho název
+		4) V detailu formuláře najdeš na záložce "How to" adresu,
+			 na kterou budeš svůj formulář odesílat.
+		5) Vytvoř si libovolný HTML (eleventy) formulář a splň následující podmínky:
+			 - každé pole musí mít atribut name="..."
+			 - formulář musit obsahovat jeden <button type="submit">
+
+		To je vše. Při odeslání formuláře se ti data uloží do databáze FormSpark
+		a zároveň ti přijde vyplněný formulář emailem.
+	-->
 
 <main class="main">
 
@@ -9,7 +30,9 @@ title: Kontakty
 
         <div class="contact__grid">
 
-            <form class="form" action="https://formular.itgirls.cz" method="post">
+            <form class="form" action="" method="post">
+
+                <input type="hidden" name="_redirect"value="https://hana-zakourilova.netlify.app/submission/"/>
 
                 <h2 class="form__title">Kontaktní formulář</h2>
                 

@@ -1,0 +1,76 @@
+@use '../abstracts/_colors.scss';
+@use "../abstracts/_fonts.scss";
+@use "../abstracts/_spacer.scss";
+
+
+.footer{
+    
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: spacer.$spacer-big;
+        background-color: colors.$c-secondary;
+        color: white;
+        margin: 0;
+        padding: spacer.$spacer-big spacer.$spacer;
+                
+    }
+
+    &__grid-column{
+        font-size: 14px;
+    }
+
+    &__grid-column img{
+        width: 50px;
+        align-content: flex-start;
+    }
+
+    &__grid-column--mobile{
+        grid-column: span 3;
+      }
+
+    &__copyright {
+        padding: spacer.$spacer-big / 2 spacer.$spacer-big;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 0;
+    }
+
+
+    &__title{
+        font-size: 16px;
+    }
+
+    
+    &__title2{
+        color:colors.$grey;
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 640px){
+
+        &__grid-column:first-child{
+            grid-column: span 1;
+        }
+
+        &__grid-column:nth-child(2){
+            grid-column: span 2;
+          }
+
+    }
+
+    @media screen and (min-width: 1100px){
+        &__grid-column:nth-child(2){
+            grid-column: span 1;
+          }
+        
+          &__grid-column:nth-child(3){
+            grid-column: span 1;
+          }
+    }
+        
+
+}
+
+
