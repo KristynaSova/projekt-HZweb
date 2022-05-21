@@ -30,7 +30,7 @@
         margin:0;
         padding: 0;
         list-style: none;
-        background-color: colors.$c-secondary;
+        background-color: #A4BDB2; /*colors.$c-secondary; #BFDBCE */
     }
     
    
@@ -40,7 +40,7 @@
         text-decoration: none;
         border-radius: 20px;
         padding: spacer.$spacer-small/2 spacer.$spacer-big/2;
-        color: white;
+        color: colors.$c-font;
         
 
         &:hover,

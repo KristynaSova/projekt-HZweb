@@ -5,8 +5,10 @@
 
 
 .container {
-    display: block;
+    
+
         &__flex{
+            
             padding: spacer.$spacer-big * 2 spacer.$spacer / 3;
         }
         
@@ -44,19 +46,9 @@
         }
 
         @media screen and (min-width:640px){
-            &__flex-column{
-                display: flex;
-            }
+                       
 
-            &__title{
-                order: 2;
-            }
-
-            &__image{
-                order:1;
-                margin-right: spacer.$spacer-small ;
-            }
-
+         
         }
 
          @media screen and (min-width:1100px){
@@ -69,16 +61,22 @@
             }
 
             &__flex-column{
-                display: block;
+                display: flex;
                 width:100%;
-                margin-bottom: 0;
+                margin-bottom: 0;            
                                    
              }
 
-             &__image{
-                
-                margin-right: 0;
+             
+            &__title{
+                order: 2;
             }
+
+            &__image{
+                order:1;
+                margin-right: spacer.$spacer-small;                
+            }
+
 
 
          }

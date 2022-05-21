@@ -54,7 +54,7 @@
   left: -9999px;
 }
 .menu .menu__item--active .menu__link {
-  background-color: #CA7988;
+  background-color: #C16878;
   color: white;
 }
 .menu__list {
@@ -62,18 +62,19 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: #7d8f87;
+  background-color: #A4BDB2;
+  /*colors.$c-secondary; #BFDBCE */
 }
 .menu__link {
   display: block;
   text-decoration: none;
   border-radius: 20px;
   padding: 10px 15px;
-  color: white;
+  color: hsl(0deg, 0%, 20%);
 }
 .menu__link:hover, .menu__link:focus {
   color: white;
-  background-color: #CA7988;
+  background-color: #C16878;
 }
 @media screen and (max-width: 1099px) {
   .menu__checkbox:checked ~ .menu__list {
@@ -96,7 +97,7 @@
   }
   .menu__link:hover, .menu__link:focus {
     color: white;
-    background-color: #CA7988;
+    background-color: #C16878;
   }
 }
 
@@ -176,7 +177,7 @@
   font-size: 16px;
   padding: 10px 15px;
   border-radius: 20px;
-  background-color: #CA7988;
+  background-color: #C16878;
   border: 0;
 }
 .button:hover {
@@ -204,9 +205,6 @@
   text-align: center;
 }
 
-.container {
-  display: block;
-}
 .container__flex {
   padding: 60px 5%;
 }
@@ -235,18 +233,6 @@
   font-size: 25px;
   line-height: 1.5em;
 }
-@media screen and (min-width: 640px) {
-  .container__flex-column {
-    display: flex;
-  }
-  .container__title {
-    order: 2;
-  }
-  .container__image {
-    order: 1;
-    margin-right: 20px;
-  }
-}
 @media screen and (min-width: 1100px) {
   .container__flex {
     display: flex;
@@ -254,12 +240,16 @@
     padding: 90px 15%;
   }
   .container__flex-column {
-    display: block;
+    display: flex;
     width: 100%;
     margin-bottom: 0;
   }
+  .container__title {
+    order: 2;
+  }
   .container__image {
-    margin-right: 0;
+    order: 1;
+    margin-right: 20px;
   }
 }
 
@@ -326,7 +316,7 @@
 }
 .form__required::after {
   content: "*";
-  color: #CA7988;
+  color: #C16878;
   margin-left: 4px;
 }
 
@@ -368,7 +358,12 @@ body {
   font-size: 16px;
   color: hsl(0deg, 0%, 20%);
   margin: 0;
-  line-height: 1.5em;
+  line-height: 1.8em;
+}
+@media screen and (min-width: 640px) {
+  body {
+    line-height: 1.5em;
+  }
 }
 
 h1, h2, h3 {
