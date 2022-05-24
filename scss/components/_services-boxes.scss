@@ -39,7 +39,7 @@
 
         &__title{
             margin-top: 0;
-            font-family: fonts.$font-special;
+            font-family: fonts.$font-base;
             font-size: 25px;
             line-height: 1.5em;
             
@@ -61,7 +61,7 @@
             }
 
             &__flex-column{
-                display: flex;
+                display: block;
                 width:100%;
                 margin-bottom: 0;            
                                    

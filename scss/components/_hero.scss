@@ -5,10 +5,7 @@
 
 .hero{
 
-    display: none;
-
-
-    @media screen and (min-width:640px){
+   
         display: flex;
         background-image: url(../images/bannerHZ1.jpg);
         background-size: cover;
@@ -26,6 +23,6 @@
             font-size: 24px;
             font-family: fonts.$font-logo;
         }
-    }
+    
    
 }

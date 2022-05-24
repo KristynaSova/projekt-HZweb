@@ -161,26 +161,21 @@
 }
 
 .hero {
-  display: none;
+  display: flex;
+  background-image: url(../images/bannerHZ1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  justify-content: center;
+  align-items: flex-end;
 }
-@media screen and (min-width: 640px) {
-  .hero {
-    display: flex;
-    background-image: url(../images/bannerHZ1.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 250px;
-    justify-content: center;
-    align-items: flex-end;
-  }
-  .hero__description {
-    margin-bottom: 5px;
-    color: white;
-    text-align: center;
-    font-style: italic;
-    font-size: 24px;
-    font-family: "Cormorant Infant", serif;
-  }
+.hero__description {
+  margin-bottom: 5px;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  font-size: 24px;
+  font-family: "Cormorant Infant", serif;
 }
 
 .button {
@@ -239,7 +234,7 @@
 }
 .container__title {
   margin-top: 0;
-  font-family: "Merriweather", serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 25px;
   line-height: 1.5em;
 }
@@ -250,7 +245,7 @@
     padding: 90px 15%;
   }
   .container__flex-column {
-    display: flex;
+    display: block;
     width: 100%;
     margin-bottom: 0;
   }
