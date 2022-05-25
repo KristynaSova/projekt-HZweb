@@ -78,7 +78,7 @@
 .menu__link {
   display: block;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 10px 15px;
   color: hsl(0deg, 0%, 20%);
 }
@@ -101,7 +101,7 @@
   }
   .menu__link {
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 10px 15px;
     color: hsl(0deg, 0%, 20%);
   }
@@ -181,7 +181,7 @@
 .button {
   font-size: 16px;
   padding: 10px 15px;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: #C16878;
   border: 0;
 }
@@ -215,7 +215,7 @@
 }
 .container__flex-column {
   border-radius: 5px;
-  box-shadow: 3px 3px 15px rgba(51, 51, 51, 0.7);
+  box-shadow: 3px 3px 15px rgba(51, 51, 51, 0.4);
   padding: 30px;
   text-align: center;
   transition: transform 0.3s;
@@ -350,6 +350,66 @@
   }
 }
 
+/*
+ **************************************
+	Blog plus clanky
+ **************************************
+*/
+.blog {
+  padding: 60px 5%;
+}
+.blog h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+.blog__title {
+  margin-top: 20px;
+  font-family: "Merriweather", serif;
+  font-size: 24px;
+  text-align: left;
+}
+.blog__meta {
+  color: silver;
+}
+.blog__perex {
+  font-weight: bold;
+  font-size: 18px;
+}
+.blog__image {
+  display: none;
+  width: 100%;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1100px) {
+  .blog {
+    padding: 90px 15%;
+  }
+  .blog__grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 40px;
+  }
+  .blog__image {
+    display: block;
+  }
+}
+
+.post__image {
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  .post {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  .post__image {
+    display: block;
+    width: 100%;
+  }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -398,7 +458,6 @@ h1, h2, h3 {
 }
 .article__image {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;

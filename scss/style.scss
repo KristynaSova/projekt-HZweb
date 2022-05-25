@@ -12,6 +12,7 @@
 
 @use "pages/kontakty";
 @use "pages/fotogalerie";
+@use "pages/blog";
 
 
 
@@ -84,7 +85,6 @@ h1, h2, h3{
 
     &__image{
         width:100%;
-        height: 100%;
         object-fit: cover;
         border-radius: 5px;
     }
@@ -216,8 +216,6 @@ h1, h2, h3{
     }
 
 }
-
-
 
 
 

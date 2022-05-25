@@ -1,0 +1,28 @@
+---
+layout: main-layout.njk
+---
+
+<main class="main">
+
+    <article class="blog">
+
+        <h1 class="blog__title">{{ title }}</h1>
+
+        <p class="blog__meta">Publikováno {{ page.date.toLocaleString('cs-CZ') }}</p>
+        <div class="blog__grid">
+
+            <div class="blog__text">
+
+                <p class="blog__perex">{{ perex }}</p>
+
+                {{ content | safe }}
+                
+            </div>
+
+            <img class="blog__image" src="/images/{{ foto }}" alt="{{ alt }}">
+
+        </div>
+
+    </article>
+
+</main>

@@ -1,0 +1,33 @@
+---
+layout: main-layout.njk
+title: Blog
+---
+
+<main class="main">
+
+    <article class="blog">
+
+        
+
+        {% for prispevek in collections.blog | reverse %}
+
+            <div class="post">
+
+                <img class="post__image" src="/images/{{ prispevek.data.foto }}" alt="{{ prispevek.data.alt }}">
+
+                <div class="post__description">
+
+                <h2>{{ prispevek.data.title }}</h2>
+
+                    <p>{{ prispevek.data.perex }}</p>
+                    <p><a href="{{ prispevek.url }}">celý článek</a> </p>
+                </div>
+
+            </div>
+
+
+        {% endfor %}
+
+    </div>
+
+</main>
