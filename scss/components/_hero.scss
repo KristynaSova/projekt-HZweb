@@ -6,17 +6,16 @@
 .hero{
 
    
-        display: flex;
+       
         background-image: url(../images/bannerHZ1.jpg);
         background-size: cover;
         background-position: center;
         height: 250px;
-        justify-content: center;
-        align-items: flex-end;
+        
         
 
         &__description{
-            margin-bottom:5px;
+            margin-top: 0;
             color: white;
             text-align: center;
             font-style: italic;
@@ -24,5 +23,15 @@
             font-family: fonts.$font-logo;
         }
     
+        @media screen and (min-width:640px){
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            &__description{
+               margin-bottom:5px;
+
+        }
+    }
    
 }

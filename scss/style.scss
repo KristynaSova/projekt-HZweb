@@ -53,7 +53,7 @@ h1, h2, h3{
     margin-top: 0;
 
     @media screen and (min-width: 1100px){
-        margin-top: 113px;
+        margin-top: 138px;
     }
     
     
@@ -100,7 +100,7 @@ h1, h2, h3{
     &__title{
         margin-top: spacer.$spacer-small;
         font-family: fonts.$font-special;
-        font-size: 18px;
+        font-size: 16px;
         text-align: left;
         
         
@@ -112,7 +112,7 @@ h1, h2, h3{
 
     &__title--center{
         text-align: center;
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: spacer.$spacer-big;
         
     }
@@ -261,3 +261,123 @@ h1, h2, h3{
     }
 }
 
+/*
+ **************************************
+	Home-pokus
+ **************************************
+*/
+
+.home{
+
+    background-color:white;
+    padding: calc(spacer.$spacer-big * 3) spacer.$spacer;
+
+    &--background-color{
+        background-color: white;
+    }
+
+    &__grid{
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 1fr 400px;
+        grid-template-rows: auto;
+    }
+
+    &__grid-item{
+        align-self: center;
+    }
+
+    .home__motto::after{
+        content:" ";
+        display:block;
+        width: 550px;
+        height: 17px;
+        background-image:linear-gradient(to top, colors.$c-secondary, white);
+        margin-top: -15px;
+        margin-left: 80px;
+        margin-bottom: 30px;
+    }
+
+   &__motto{
+        margin-top:0;
+        font-style: italic;
+        text-align: center;
+        font-family: fonts.$font-special;
+        font-size: 22px;
+        line-height: 1.5em;
+        color: colors.$grey50;
+    } 
+
+    &__flex-column{
+        display: flex;
+        border-radius: 5px;
+        box-shadow: 1px 1px 7px rgba($color: colors.$c-font, $alpha: 0.15);
+        padding: spacer.$spacer-big;
+        text-align: center;
+        transition: transform 0.3s;
+        margin-bottom: spacer.$spacer-big;
+        background: white;
+        text-decoration: none;
+        color: colors.$c-secondary;
+        
+    }
+
+    
+    &__flex-column:hover{
+        transform: scale(1.08);
+        
+    }
+
+    &__title{
+        margin: 0;
+        font-family: fonts.$font-base;
+        font-size: 16px;
+        line-height: 1.5em;
+        font-weight: normal;
+        
+    }
+
+    &__icon{
+        width: 25px;
+        margin-right: spacer.$spacer-small;                
+    }
+
+    &__image{
+        width:100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    &__text{
+        font-family: fonts.$font-base;
+        font-size: 14px;
+        line-height: 1.5em;
+        text-align: center;
+    }
+
+    &__text {
+        margin-top: 16px;
+        
+    }
+
+    &__text  + &__text {
+        margin-top: 16px;
+    }
+
+    &__text:nth-child(6){
+        margin-bottom: 30px;
+    }
+
+    &__title2{
+        margin: 0;
+        font-family: fonts.$font-special;
+        font-size: 18px;
+        line-height: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        color: colors.$c-secondary;
+        
+    }
+
+
+}

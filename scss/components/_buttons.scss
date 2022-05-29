@@ -7,7 +7,7 @@
 
 
 .button{
-    font-size: 16px;
+    font-size: 14px;
     padding: spacer.$spacer-small / 2 spacer.$spacer-big / 2;
     border-radius: 5px;
     background-color: colors.$c-primary;
@@ -35,6 +35,13 @@
 .buttons{
     text-align: center;
 
+    &--blog{
+        text-align: left;
+        margin: 30px 0;
+        
+    }
+
+    
     @media screen and (min-width:1100px){
         text-align: right;
     }

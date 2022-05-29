@@ -3,7 +3,7 @@ layout: main-layout.njk
 title: Blog
 ---
 
-<main class="main">
+
 
     <article class="blog">
 
@@ -20,7 +20,13 @@ title: Blog
                 <h2>{{ prispevek.data.title }}</h2>
 
                     <p>{{ prispevek.data.perex }}</p>
-                    <p><a href="{{ prispevek.url }}">celý článek</a> </p>
+
+                    <div class="buttons buttons--blog">
+                        <button class="button">
+                        <a class="button__title" href="{{ prispevek.url }}">celý článek</a>
+                        </button>
+                    </div>
+                    
                 </div>
 
             </div>
@@ -30,4 +36,3 @@ title: Blog
 
     </div>
 
-</main>
