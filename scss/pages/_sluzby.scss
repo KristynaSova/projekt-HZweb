@@ -1,0 +1,164 @@
+@use '../abstracts/_colors.scss';
+@use "../abstracts/_fonts.scss";
+@use "../abstracts/_spacer.scss";
+
+
+
+/*
+ **************************************
+	Služby ( o mně, ceník)
+ **************************************
+*/
+
+.article{
+
+    background-color:colors.$lightgrey;
+    padding: calc(spacer.$spacer-big * 2) calc(spacer.$spacer / 3);
+
+    &--background-color{
+        background-color: white;
+    }
+
+   
+
+    &__image{
+        width:100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    &__image--round{
+        border-radius:50%;
+        width: 300px;
+        border: 3px solid white;
+        box-shadow: 3px 3px 10px colors.$grey;
+        
+      }
+
+
+    &__title{
+        margin-top: spacer.$spacer-small;
+        font-family: fonts.$font-special;
+        font-size: 16px;
+        text-align: left;
+        color: colors.$c-secondary;
+        
+        
+    }
+
+    &__paragraph{
+        font-style: italic;
+    }
+
+    &__title--center{
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: spacer.$spacer-big;
+        color: colors.$c-secondary;
+        
+    }
+    
+    &__title--small{
+        font-size: 16px;
+    }
+
+    &__column-right{
+        text-align: left;
+    }
+
+    &__column-left{
+        text-align: center;
+        margin-bottom: 20px;
+       
+    }
+
+    &__column-right p {
+        margin-top: 0;
+        
+    }
+
+    &__column-right p + p {
+        margin-top: 16px;
+    }
+
+    &__list{
+        text-align: left;
+    }
+
+    &__list li{
+        margin-top: 0;
+    }
+
+    &__list li + li {
+        margin-top: 10px;
+    }
+
+    @media screen and (min-width:640px){
+
+        &__grid{
+            display: grid;
+            gap: 50px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+           
+        }
+
+       
+        &__title{
+            margin-top: 0;
+            text-align: left;
+            
+        }
+
+        &--center{
+            text-align: left;
+        }
+
+        &__title--center{
+            text-align: center;
+                     
+        }
+
+        
+        &__column-right{
+            text-align: left;
+            align-self: center;
+        }
+
+        &__column-left{
+            text-align: center;
+            margin-bottom: 0;
+            
+        }
+
+                   
+
+
+    }
+
+
+
+    @media screen and (min-width:1100px){
+        
+        padding: spacer.$spacer-big * 3 spacer.$spacer;
+              
+       
+        &__grid{
+            display: grid;
+            gap: 50px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+           
+        }
+
+        &__column-right{
+            grid-column: span 2;
+        
+        }
+
+        
+    }
+
+}
+
+

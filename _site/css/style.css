@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  **************************************
 	HEADER
@@ -8,22 +9,15 @@
   background-color: white;
   box-shadow: 3px 3px 10px rgba(51, 51, 51, 0.7);
 }
-.header__left {
-  position: relative;
-}
-.header__img {
-  display: none;
-  position: absolute;
-  width: 75px;
-  left: 230px;
-  top: -20px;
-}
 .header__title {
   font-family: "Cormorant Infant", serif;
   font-size: 24px;
-  margin: 0 0 5px 0;
+  margin: 0;
 }
 .header__link {
+  font-family: "Cormorant Infant", serif;
+  font-size: 24px;
+  margin: 0;
   text-decoration: none;
   color: hsl(0deg, 0%, 20%);
 }
@@ -32,6 +26,7 @@
   font-style: italic;
   font-size: 14px;
   margin: 0;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 640px) {
   .header {
@@ -48,6 +43,9 @@
     display: flex;
     justify-content: space-between;
     padding: 30px 15%;
+  }
+  .header__description {
+    margin-bottom: 0;
   }
 }
 
@@ -72,8 +70,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: #A4BDB2;
-  /*colors.$c-secondary; #BFDBCE */
+  background-color: #f0f0f0;
 }
 .menu__link {
   display: block;
@@ -166,23 +163,24 @@
   background-size: cover;
   background-position: center;
   height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero__description {
   margin-top: 0;
+  margin-bottom: 0;
   color: white;
   text-align: center;
   font-style: italic;
-  font-size: 24px;
+  font-size: 30px;
   font-family: "Cormorant Infant", serif;
+  line-height: 1.2em;
 }
 @media screen and (min-width: 640px) {
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
   .hero__description {
-    margin-bottom: 5px;
+    line-height: 1.5em;
+    font-size: 36px;
   }
 }
 
@@ -237,7 +235,6 @@
   background: white;
   text-decoration: none;
   color: #7d8f87;
-  place-content: center;
 }
 .container__image {
   width: 25px;
@@ -400,6 +397,9 @@
   }
 }
 
+.post__image {
+  display: none;
+}
 @media screen and (min-width: 640px) {
   .post {
     display: grid;
@@ -410,6 +410,112 @@
   .post__image {
     display: block;
     width: 100%;
+  }
+}
+
+/*
+ **************************************
+	Služby ( o mně, ceník)
+ **************************************
+*/
+.article {
+  background-color: #f0f0f0;
+  padding: 60px 5%;
+}
+.article--background-color {
+  background-color: white;
+}
+.article__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.article__image--round {
+  border-radius: 50%;
+  width: 300px;
+  border: 3px solid white;
+  box-shadow: 3px 3px 10px hsl(0deg, 0%, 80%);
+}
+.article__title {
+  margin-top: 20px;
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  text-align: left;
+  color: #7d8f87;
+}
+.article__paragraph {
+  font-style: italic;
+}
+.article__title--center {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #7d8f87;
+}
+.article__title--small {
+  font-size: 16px;
+}
+.article__column-right {
+  text-align: left;
+}
+.article__column-left {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.article__column-right p {
+  margin-top: 0;
+}
+.article__column-right p + p {
+  margin-top: 16px;
+}
+.article__list {
+  text-align: left;
+}
+.article__list li {
+  margin-top: 0;
+}
+.article__list li + li {
+  margin-top: 10px;
+}
+@media screen and (min-width: 640px) {
+  .article__grid {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .article__title {
+    margin-top: 0;
+    text-align: left;
+  }
+  .article--center {
+    text-align: left;
+  }
+  .article__title--center {
+    text-align: center;
+  }
+  .article__column-right {
+    text-align: left;
+    align-self: center;
+  }
+  .article__column-left {
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .article {
+    padding: 90px 15%;
+  }
+  .article__grid {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+  .article__column-right {
+    grid-column: span 2;
   }
 }
 
@@ -443,110 +549,69 @@ h1, h2, h3 {
 }
 @media screen and (min-width: 1100px) {
   .main {
-    margin-top: 138px;
+    margin-top: 133px;
   }
 }
 
 /*
  **************************************
-	Home-Inner section (
+	Home-Inner section 
  **************************************
 */
-.article {
+.home {
   background-color: #f0f0f0;
   padding: 60px 5%;
 }
-.article--background-color {
+.home--background-color {
   background-color: white;
 }
-.article__image {
+.home__image {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
 }
-.article__image--round {
-  border-radius: 50%;
-  max-width: 300px;
-  border: 3px solid white;
-  box-shadow: 3px 3px 10px hsl(0deg, 0%, 80%);
-}
-.article__title {
-  margin-top: 20px;
+.home__title {
+  margin-top: 0;
   font-family: "Merriweather", serif;
-  font-size: 16px;
-  text-align: left;
-}
-.article__paragraph {
-  font-style: italic;
-}
-.article__title--center {
+  font-size: 18px;
   text-align: center;
-  font-size: 20px;
+  color: #7d8f87;
+}
+.home__column-left {
+  text-align: left;
+  margin-bottom: 50px;
+}
+.home__column-left p {
+  margin-bottom: 0;
+}
+.home__column-left p + p {
   margin-bottom: 30px;
 }
-.article__title--small {
-  font-size: 16px;
-}
-.article__column-right {
-  text-align: left;
-}
-.article__column-left {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.article__column-right p {
-  margin-top: 0;
-}
-.article__column-right p + p {
-  margin-top: 16px;
-}
-.article__list {
-  text-align: left;
-}
-.article__list li {
-  margin-top: 0;
-}
-.article__list li + li {
-  margin-top: 10px;
-}
 @media screen and (min-width: 640px) {
-  .article__grid {
+  .home__grid {
     display: grid;
-    gap: 20px;
+    gap: 50px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
   }
-  .article__title {
+  .home__title {
     margin-top: 0;
-    text-align: left;
   }
-  .article--center {
-    text-align: left;
-  }
-  .article__title--center {
-    text-align: center;
-  }
-  .article__column-right {
-    text-align: left;
-  }
-  .article__column-left {
-    text-align: left;
+  .home__column-left {
+    align-self: center;
     margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1100px) {
-  .article {
+  .home {
     padding: 90px 15%;
   }
-  .article__grid {
+  .home__grid {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    grid-template-columns: 1fr 400px;
     grid-template-rows: auto;
-  }
-  .article__column-right {
-    grid-column: span 2;
   }
 }
 
@@ -579,101 +644,4 @@ h1, h2, h3 {
   .submission {
     padding: 90px 15%;
   }
-}
-
-/*
- **************************************
-	Home-pokus
- **************************************
-*/
-.home {
-  background-color: white;
-  padding: 90px 15%;
-}
-.home--background-color {
-  background-color: white;
-}
-.home__grid {
-  display: grid;
-  gap: 50px;
-  grid-template-columns: 1fr 400px;
-  grid-template-rows: auto;
-}
-.home__grid-item {
-  align-self: center;
-}
-.home .home__motto::after {
-  content: " ";
-  display: block;
-  width: 550px;
-  height: 17px;
-  background-image: linear-gradient(to top, #7d8f87, white);
-  margin-top: -15px;
-  margin-left: 80px;
-  margin-bottom: 30px;
-}
-.home__motto {
-  margin-top: 0;
-  font-style: italic;
-  text-align: center;
-  font-family: "Merriweather", serif;
-  font-size: 22px;
-  line-height: 1.5em;
-  color: hsl(0deg, 0%, 50%);
-}
-.home__flex-column {
-  display: flex;
-  border-radius: 5px;
-  box-shadow: 1px 1px 7px rgba(51, 51, 51, 0.15);
-  padding: 30px;
-  text-align: center;
-  transition: transform 0.3s;
-  margin-bottom: 30px;
-  background: white;
-  text-decoration: none;
-  color: #7d8f87;
-}
-.home__flex-column:hover {
-  transform: scale(1.08);
-}
-.home__title {
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1.5em;
-  font-weight: normal;
-}
-.home__icon {
-  width: 25px;
-  margin-right: 20px;
-}
-.home__image {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 5px;
-}
-.home__text {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  line-height: 1.5em;
-  text-align: center;
-}
-.home__text {
-  margin-top: 16px;
-}
-.home__text + .home__text {
-  margin-top: 16px;
-}
-.home__text:nth-child(6) {
-  margin-bottom: 30px;
-}
-.home__title2 {
-  margin: 0;
-  font-family: "Merriweather", serif;
-  font-size: 18px;
-  line-height: 1.5em;
-  font-weight: bold;
-  text-align: center;
-  color: #7d8f87;
 }
