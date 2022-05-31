@@ -133,6 +133,7 @@
   font-size: 14px;
   text-align: center;
   margin-top: 0;
+  font-weight: normal;
 }
 .footer__title {
   font-size: 16px;
@@ -148,6 +149,11 @@
   .footer__grid-column:nth-child(2) {
     grid-column: span 2;
   }
+  .footer__copyright {
+    padding: 0 15%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 @media screen and (min-width: 1100px) {
   .footer__grid-column:nth-child(2) {
@@ -159,7 +165,7 @@
 }
 
 .hero {
-  background-image: url(../images/bannerHZ1.jpg);
+  background-image: url(../images/hero.jpg);
   background-size: cover;
   background-position: center;
   height: 250px;
@@ -176,16 +182,20 @@
   font-size: 30px;
   font-family: "Cormorant Infant", serif;
   line-height: 1.2em;
+  padding: 90px 0;
+  background: rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 640px) {
   .hero__description {
     line-height: 1.5em;
     font-size: 36px;
+    padding: 0;
+    background: none;
   }
 }
 
 .button {
-  font-size: 14px;
+  font-size: 15px;
   padding: 10px 15px;
   border-radius: 5px;
   background-color: #C16878;
@@ -333,6 +343,7 @@
 }
 .gallery__grid img {
   width: 100%;
+  aspect-ratio: 236/133;
 }
 @media screen and (min-width: 640px) {
   .gallery__grid {
@@ -361,12 +372,14 @@
 .blog h2 {
   font-size: 18px;
   margin-top: 0;
+  color: #7d8f87;
 }
 .blog__title {
   margin-top: 20px;
   font-family: "Merriweather", serif;
   font-size: 24px;
   text-align: left;
+  color: #7d8f87;
 }
 .blog__meta {
   color: silver;
@@ -374,6 +387,7 @@
 .blog__perex {
   font-weight: bold;
   font-size: 18px;
+  color: #7d8f87;
 }
 .blog__image {
   display: none;
@@ -399,6 +413,12 @@
 
 .post__image {
   display: none;
+}
+.post__title {
+  font-family: "Merriweather", serif;
+  font-size: 24px;
+  text-align: left;
+  color: #7d8f87;
 }
 @media screen and (min-width: 640px) {
   .post {
@@ -438,7 +458,7 @@
   box-shadow: 3px 3px 10px hsl(0deg, 0%, 80%);
 }
 .article__title {
-  margin-top: 20px;
+  margin-top: 0;
   font-family: "Merriweather", serif;
   font-size: 16px;
   text-align: left;
@@ -612,6 +632,13 @@ h1, h2, h3 {
     gap: 50px;
     grid-template-columns: 1fr 400px;
     grid-template-rows: auto;
+  }
+  .home__title {
+    font-size: 20px;
+    text-align: left;
+  }
+  .home .buttons {
+    text-align: left;
   }
 }
 

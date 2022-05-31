@@ -15,6 +15,7 @@
     h2{
         font-size: 18px;
         margin-top: 0;
+        color: colors.$c-secondary;
     }
     padding: calc(spacer.$spacer-big * 2) calc(spacer.$spacer / 3);
 
@@ -23,6 +24,8 @@
         font-family: fonts.$font-special;
         font-size: 24px;
         text-align: left;
+        color: colors.$c-secondary;
+
 
     }
 
@@ -34,6 +37,7 @@
       &__perex {
         font-weight: bold;
         font-size: 18px;
+        color: colors.$c-secondary;
     }
     
     &__image {
@@ -75,6 +79,14 @@
     &__image {
         display: none;
          
+    }
+
+    &__title{
+        font-family: fonts.$font-special;
+        font-size: 24px;
+        text-align: left;
+        color: colors.$c-secondary;
+
     }
 
    
