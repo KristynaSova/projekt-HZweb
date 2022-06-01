@@ -29,6 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Waterfall&display=swap" rel="stylesheet">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -67,87 +68,84 @@
 
     <!-- Inner section -->
 
-       	<!-- Hero section with background image and motto -->
-       <div class="hero">
-		
-        <p class="hero__description">
-            I jen vyslovení toho, co mě trápí, může být léčivé
-        </p>		
+      	<!-- Hero section with background image and motto -->
+      <div class="hero">
+
+        <div class="hero__grid">
+
+             <img class="hero__image" src="/images/bannerHZ1.jpg" alt="hero">
+
+             <p class="hero__description">
+                I jen vyslovení toho, co mě trápí, může být léčivé
+            </p>	
+            
+           
+
+        </div>
 
 	</div>
           
-    <div class="container">
-
-    <div class="container__flex">
-
-        <a href="/sluzby/#psychoterapie" class="container__flex-column">
-
-            <img class="container__image" src="/images/couch-mint.svg" alt="couch">
-            
-            <h2 class="container__title">Psychoterapie a poradenství</h2>
-            
-            
-           
-        </a>
-
-        <a href="/sluzby/#prevence" class="container__flex-column">
-
-            <img class="container__image" src="/images/hands-mint.svg" alt="hands">
-            
-            <h2 class="container__title">Primární prevence</h2>
-            
-             
-            
-        </a>
-
-        <a href="/sluzby/#lektorovani" class="container__flex-column">
-
-            <img class="container__image" src="/images/book-mint.svg" alt="book">
-            
-            <h2 class="container__title">Lektorská činnost</h2>
-            
-            
-            
-        </a>
-    
-    </div>
-
-    
-</div>
+  
 
     <article class="home">
         
         <div class="home__grid">
 
-            
+            <img class="home__logo" src="/images/favicon.svg" alt="logo">
            
             <!-- left column -->           
-            <div class="home__column-left">	
+            <div class="home__grid-item">
 
-                <h2 class="home__title" >Mgr. Hana Zakouřilová, MBA</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, adipisci? Voluptate nisi in delectus. Harum officia doloremque maxime amet? Minima praesentium enim nesciunt ipsum sequi esse perspiciatis, velit maiores officiis!</p>
-                
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, adipisci? Voluptate nisi in delectus. Harum officia doloremque maxime amet? Minima praesentium enim nesciunt ipsum sequi esse perspiciatis, velit maiores officiis!</p>
-                
-                <p>Během své práce dodržuji etické zásady a mlčenlivost. Jsem členkou České asociace pro psychoterapii.</p>
+                <h2 class="home__title">S čím mohu pomoci</h2>
 
-                <div class="buttons buttons--center">
-                    <button class="button">
-                    <a class="button__title" href="/omne/">Moje reference</a>
-                    </button>
-                </div>
+                <p class="home__text">V rámci své činnosti se věnuji několika oblastem - poradenství, psychoterapii, primárně preventivním aktivitám na základních a středních školách, vzdělávacím aktivitám.</p>
+                <p class="home__text">Během své práce dodržuji etické zásady a mlčenlivost. Jsem členkou České asociace pro psychoterapii.</p>
+
+                 <div class="container">
+
+
+    <a href="/sluzby/#psychoterapie" class="container__flex">
+
+        <img class="container__icon" src="/images/couch-mint.svg" alt="couch">
+        
+        <p class="container__text">Psychoterapie</p>
+        
+        
+        
+    </a>
+
+    <a href="/sluzby/#prevence" class="container__flex">
+
+        <img class="container__icon" src="/images/hands-mint.svg" alt="hands">
+        
+        <p class="container__text">Primární prevence</p>
+        
             
-              
+        
+    </a>
+
+    <a href="/sluzby/#lektorovani" class="container__flex">
+
+        <img class="container__icon" src="/images/book-mint.svg" alt="book">
+        
+        <p class="container__text">Lektorská činnost</p>
+             
+    </a>
+    
+    
+
+    
+</div>
+
+    
             </div>
 
-            <!-- right column -->
+             <img class="home__image" src="/images/profile.jpg" alt="Hanka">
+           
             
-            <img class="home__image" src="/images/profile.jpg" alt="Hanka">
-
-            
-
         </div>
 
+      
     </article>
     
 
@@ -206,6 +204,19 @@
 
     
     <script src="/js/fslightbox.js"></script>
+
+    <script>
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+      </script>
+      
 
 </body>
 </html>

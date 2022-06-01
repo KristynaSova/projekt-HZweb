@@ -15,6 +15,10 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy("js");
 
+  // admin složka pro Netlify CMS
+  eleventyConfig.addPassthroughCopy("admin");
+
+
   return {
     // možné formáty šablon
     templateFormats: ["njk", "html", "md", "liquid"],

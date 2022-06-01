@@ -5,19 +5,12 @@
 
 
 .container {
-     
+
     
-
-        &__flex{
-
-            padding: spacer.$spacer-big * 2 spacer.$spacer / 3;
-            
-           
-        }
         
-         &__flex-column{
+         &__flex{
             display: flex;
-            width:100%;
+          
             border-radius: 5px;
             box-shadow: 1px 1px 7px rgba($color: colors.$c-font, $alpha: 0.15);
             padding: spacer.$spacer-big;
@@ -27,46 +20,31 @@
             background: white;
             text-decoration: none;
             color: colors.$c-secondary;
-           
+            
         
         }
 
-        &__image{
+        &__icon{
             width: 25px;
             margin-right: spacer.$spacer-small;
         }
 
-        &__flex-column:hover{
+        &__flex:hover{
             transform: scale(1.08);
             
         }
 
         
-        &__title{
+        &__text{
             margin: 0;
             font-family: fonts.$font-base;
             font-size: 16px;
             line-height: 1.5em;
-            font-weight: normal;
+            
             
         }
 
        
-        @media screen and (min-width:1100px){
-
-
-            &__flex{
-                display: flex;
-                gap: spacer.$spacer-small;
-                padding: spacer.$spacer-big *3 spacer.$spacer;
-                
-            }
-
-          
-
-             
-           
-         }
 
 }
 
