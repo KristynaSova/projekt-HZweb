@@ -7,7 +7,7 @@
 .header {
   padding: 30px 5%;
   background-color: white;
-  box-shadow: 3px 3px 10px rgba(51, 51, 51, 0.7);
+  box-shadow: -4px 3px 10px rgba(51, 51, 51, 0.7);
 }
 .header__title {
   font-family: "Cormorant Infant", serif;
@@ -110,8 +110,8 @@
 }
 
 .footer__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
   gap: 30px;
   background-color: #7d8f87;
   color: white;
@@ -125,12 +125,9 @@
   width: 50px;
   align-content: flex-start;
 }
-.footer__grid-column--mobile {
-  grid-column: span 3;
-}
 .footer__copyright {
   padding: 15px 30px;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   margin-top: 0;
   font-weight: normal;
@@ -280,7 +277,7 @@
   margin-right: 20px;
 }
 .container__flex:hover {
-  transform: scale(1.08);
+  transform: scale(1.03);
 }
 .container__text {
   margin: 0;
@@ -579,7 +576,7 @@ h1, h2, h3 {
 }
 
 .main {
-  margin-top: 0;
+  margin-top: 2px;
 }
 @media screen and (min-width: 1100px) {
   .main {

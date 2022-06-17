@@ -7,8 +7,8 @@
     
 
     &__grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        justify-content: space-between;
         gap: spacer.$spacer-big;
         background-color: colors.$c-secondary;
         color: white;
@@ -26,13 +26,11 @@
         align-content: flex-start;
     }
 
-    &__grid-column--mobile{
-        grid-column: span 3;
-      }
+    
 
     &__copyright {
         padding: spacer.$spacer-big / 2 spacer.$spacer-big;
-        font-size: 14px;
+        font-size: 12px;
         text-align: center;
         margin-top: 0;
         font-weight: normal;
